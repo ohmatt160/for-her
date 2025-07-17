@@ -1,0 +1,273 @@
+:root {
+    --primary-bg: #333;
+    --text-color: antiquewhite;
+    --highlight: #f5ba5e;
+    --hover: #ff8c00;
+    --max-width: 800px;
+}
+
+/* Gradient background */
+body {
+    background: linear-gradient(135deg, #1e1e1e, #111);
+    color: antiquewhite;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    animation: fadeInBody 1s ease-in-out;
+}
+
+
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header gradient */
+header {
+    background: linear-gradient(90deg, #4b006e, #18002c);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Section background with gradient */
+section {
+    background: linear-gradient(145deg, #2c003e, #1b002d);
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transform: translateY(20px);
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Highlight headings */
+section h2,
+section h3 {
+    color: #ff9ff3;
+    transition: color 0.3s ease;
+}
+
+section h2:hover,
+section h3:hover {
+    color: #f368e0;
+}
+
+/* Collapsible buttons */
+.collapsible {
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+.collapsible:hover {
+    background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+    box-shadow: 0 0 10px #fcb045;
+}
+
+/* Collapsible content smooth open */
+.content {
+    transition: max-height 0.5s ease, padding 0.3s ease;
+    background-color: #222;
+    border-radius: 0 0 10px 10px;
+    margin-top: 0.5rem;
+    padding: 0 10px;
+}
+
+/* Image glow on hover */
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff9ff3;
+}
+
+/* Navigation link hover glow */
+nav ul li a {
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9ff3;
+    text-shadow: 0 0 5px #f368e0;
+}
+
+/* Back to Top button styling */
+#backToTopBtn {
+    background: linear-gradient(to right, #ff9ff3, #f368e0);
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #ff9ff3;
+}
+
+#backToTopBtn:hover {
+    background: linear-gradient(to right, #f368e0, #ff6ec4);
+    box-shadow: 0 0 20px #ff6ec4;
+}
+
+/* Footer gradient */
+footer {
+    background: linear-gradient(90deg, #4b006e, #18002c);
+    color: #fff;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer a:hover {
+    color: #ff9ff3;
+}
+
+
+
+
+header {
+    background-color: var(--primary-bg);
+    padding: 1.5rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: var(--highlight);
+}
+
+main {
+    padding: 2rem 1rem;
+}
+
+section {
+    background-color: var(--primary-bg);
+    border-radius: 1.5rem;
+    max-width: var(--max-width);
+    margin: 2rem auto;
+    padding: 1.5rem;
+}
+
+section h2,
+section h3 {
+    text-align: center;
+    color: var(--highlight);
+}
+
+section p,
+section ul {
+    line-height: 1.8;
+    text-align: center;
+}
+
+ul {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 1rem;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+figure {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--primary-bg);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer a {
+    color: var(--highlight);
+    text-decoration: none;
+}
+
+#backToTopBtn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--highlight);
+    color: black;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 999;
+}
+
+#backToTopBtn:hover {
+    background-color: var(--hover);
+}
+
+.collapsible {
+    background-color: #444;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+}
+
+.collapsible:hover {
+    background-color: #555;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+}
